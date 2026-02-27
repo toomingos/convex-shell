@@ -2,7 +2,7 @@
   "name": "convex-shell",
   "description": "A virtual shell that runs read-only commands against in-memory files. Zero dependencies, pure TypeScript.",
   "version": "0.1.0",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "type": "module",
   "keywords": [
     "convex",
