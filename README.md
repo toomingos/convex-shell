@@ -4,12 +4,6 @@ A virtual shell that runs read-only commands against in-memory files. Zero depen
 
 Built for AI agents that need to explore files without disk access — works great with [Convex](https://convex.dev), Cloudflare Workers, or anywhere you have files as strings.
 
-## Install
-
-```bash
-npm install convex-shell
-```
-
 ## Usage
 
 ```typescript
