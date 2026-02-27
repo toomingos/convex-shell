@@ -1,0 +1,47 @@
+{
+  "name": "convex-shell",
+  "description": "A virtual shell that runs read-only commands against in-memory files. Zero dependencies, pure TypeScript.",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "keywords": [
+    "convex",
+    "virtual-shell",
+    "sandbox",
+    "filesystem",
+    "shell"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toomingos/convex-shell.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toomingos/convex-shell/issues"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "build:clean": "rm -rf dist *.tsbuildinfo && npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "preversion": "npm run build:clean && npm test",
+    "release": "npm version patch && npm publish && git push --follow-tags"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
+  }
+}
