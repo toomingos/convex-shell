@@ -37,7 +37,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "preversion": "npm run build:clean && npm test",
+    "prepublishOnly": "npm run build:clean && npm test",
     "release": "npm version patch && npm publish && git push --follow-tags"
   },
   "devDependencies": {
